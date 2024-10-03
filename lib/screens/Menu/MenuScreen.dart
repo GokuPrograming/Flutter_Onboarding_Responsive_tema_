@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:practica3_onboarding_screen_y_responsive_desing/config/storage/onboarding.dart';
-import 'package:practica3_onboarding_screen_y_responsive_desing/config/storage/tema_storage.dart';
-import 'package:practica3_onboarding_screen_y_responsive_desing/screens/Onboarding/onboardingContent.dart';
+import 'package:practica3_onboarding_screen_y_responsive_desing/screens/Menu/MenuContent.dart';
 
-class OnboradingScreen extends StatefulWidget {
-  const OnboradingScreen({super.key});
+class Menuscreen extends StatefulWidget {
+  const Menuscreen({super.key});
 
   @override
-  State<OnboradingScreen> createState() => _OnboradingScreenState();
+  State<Menuscreen> createState() => _Menuscreen();
 }
 
-class _OnboradingScreenState extends State<OnboradingScreen> {
+class _Menuscreen extends State<Menuscreen> {
   int currentIndex = 0;
   late PageController _controller;
 
@@ -85,23 +83,24 @@ class _OnboradingScreenState extends State<OnboradingScreen> {
               margin: const EdgeInsets.all(40),
               child: FloatingActionButton(
                 onPressed: () {
-                  if (currentIndex == contents.length - 1) {
-                    // Navigator.pushNamed(context, '/MenuApp');
-                    Navigator.pushNamedAndRemoveUntil(
-                      context,
-                      '/MenuApp',
-                      (Route<dynamic> route) =>
-                          true, // Esto elimina todas las rutas anteriores
-                    );
-                    OnboardingVisto Guardar = OnboardingVisto();
-                    Guardar.saveOnboarding(1);
-                  }
+                  // if (currentIndex == contents.length - 1) {
+                  //   // Navigator.pushNamed(context, '/MenuApp');
+                  //   Navigator.pushNamedAndRemoveUntil(
+                  //     context,
+                  //     '/MenuApp',
+                  //     (Route<dynamic> route) =>
+                  //         true, // Esto elimina todas las rutas anteriores
+                  //   );
+                  //   // OnboardingVisto Guardar = OnboardingVisto();
+                  //   // Guardar.saveOnboarding(1);
+                  // }
                   _controller.nextPage(
                       duration: const Duration(milliseconds: 100),
                       curve: Curves.bounceIn);
                 },
-                child: Text(
-                    currentIndex == contents.length - 1 ? 'Continuar' : 'Next'),
+                child: Text(currentIndex == contents.length - 1
+                    ? 'Continuar'
+                    : 'Continuar'),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),

@@ -19,7 +19,9 @@ class _TemaAppVerticalState extends State<TemaAppVertical> {
       appBar: AppBar(
         title: Text('Tema en la aplicacion'),
       ),
-      body: Container(
+      body:
+      
+       Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         // alignment: Alignment.center,

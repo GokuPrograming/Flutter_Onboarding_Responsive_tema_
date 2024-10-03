@@ -103,7 +103,7 @@ class _LoginScreenState extends State<LoginVertical> {
       top: MediaQuery.of(context).size.height * .4,
       child: Image.asset(
         'assets/img/loading.gif',
-        height: MediaQuery.of(context).size.height*.1,
+        height: MediaQuery.of(context).size.height * .1,
       ),
     );
 

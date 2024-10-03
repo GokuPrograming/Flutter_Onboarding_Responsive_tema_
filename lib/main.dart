@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:practica3_onboarding_screen_y_responsive_desing/config/fuenteSettings.dart';
 import 'package:practica3_onboarding_screen_y_responsive_desing/config/globalSettings.dart';
 import 'package:practica3_onboarding_screen_y_responsive_desing/config/storage/tema_storage.dart';
 import 'package:practica3_onboarding_screen_y_responsive_desing/config/themeSethings.dart';
@@ -18,15 +17,14 @@ void main() async {
   // Si no hay un tema almacenado, se aplicará el tema oscuro por defecto
   if (numeroTema == null) {
     Globalsettings.lightTheme.value = 1;
-    await temaStorage.guardarNumeroTema(1);  // Guardar el tema oscuro por defecto
+    await temaStorage
+        .guardarNumeroTema(1); // Guardar el tema oscuro por defecto
   } else {
     Globalsettings.lightTheme.value = numeroTema;
   }
 
   runApp(const MyApp());
 }
-
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
